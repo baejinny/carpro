@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVcar charging point</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600&display=swap');
+
+        * {
+            font-family: 'Mitr', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            position: relative;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: whitesmoke;
+
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            color: #d8ebe4;
+            -webkit-text-stroke: 1.2px #282846;
+            font-size: 40px;
+            font-weight: bold;
+            max-width: 80px;
+            text-decoration: none;
+        }
+
+        header ul {
+            position: relative;
+            display: flex;
+        }
+
+        header ul li {
+            list-style: none;
+        }
+
+        header ul li a {
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            font-weight: 400;
+            margin-left: 40px;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 50px;
+            background-color: #ff7b54;
+
+        }
+
+        /* .active {
+  /* display: inline;} */
+
+
+
+        .active:hover {
+            background-color: #ffd56b;
+            border-radius: 50px;
+        }
+
+        .navfloat {
+            float: right;
+            display: block;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .navbar {
+            margin: 20px;
+            border: solid black;
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content .texthead {
+            position: relative;
+            max-width: 600px;
+        }
+
+        .content .texthead h1 {
+            color: #282846;
+            font-size: 70px;
+            width: 100%;
+            line-height: 1.4em;
+            font-weight: 500;
+            text-shadow: -1px 0 #939b62, 0 1px #939b62, 1px 0 #939b62, 0 -1px #939b62;
+
+        }
+
+        .content .texthead span {
+            color: #fed049;
+        }
+
+        .content .texthead p {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            margin-left: 100px;
+        }
+
+        .content .imghead {
+            width: 600px;
+            display: flex;
+            /* justify-content: flex-start; */
+            padding-right: 10px;
+            margin-top: 10px;
+        }
+
+        .content .imghead img {
+            max-width: 600px;
+        }
+
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(143deg, #bfdcae 0%,#81b214 49%, #206a5d 100%);
+            clip-path: circle(800px at right 800px);
+        }
+    
+        .contentmiddle {
+            /* background-color:#d8ebe4 ; */
+            width: 100%;
+            height: 460px;
+            margin: o;
+            padding: 0;
+            box-sizing: border-box;
+            background: rgb(147,155,98);
+            background: linear-gradient(180deg, whitesmoke 0%, rgba(255,213,107,1) 85%); 
+            border-radius: 50px;       }
+
+        .decomidd {
+            position: absolute;
+            margin-bottom: 100px;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 120px;
+            background: linear-gradient(143deg, rgb(143, 151, 255) 100%) rgba(40, 40, 70, 1) 0%,;
+            clip-path: polygon(39% 43%, 48% 0, 57% 43%, 99% 51%, 57% 58%, 48% 100%, 39% 57%, 1% 49% );
+
+        }
+
+
+        .textmiddle {
+            position:relative;
+            width: 100%;
+            /* right: 300px; */
+            display: flex;
+            padding: 30px 40px;
+            justify-content: center;
+            /* grid-template-columns: auto auto; */
+            align-items: center;
+            /* margin-left: 100px; */             
+            margin-top: 30px;
+
+        } 
+
+        .contentmiddle .textmiddle .imgmid img {
+            /* display: block; */
+            /* display: flex; */
+            width: 500px;
+            border-radius: 10% 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        }
+
+        .contentmiddle h2 {       
+            font-size: 30px;
+            color: #007580;
+            text-shadow: -1.5px 0 #ffffff, 0 1.5px #ffffff, 1.5px 0 #ffffff, 0 -1.5px #ffffff;
+            text-align: center;
+        }
+
+        .texttext{
+            font-size: 20px;
+            /* width: 100%; */
+            margin-left: 50px;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="carproject.html" class="logo">EVSTATION</a>
+            <ul>
+                <li><a href="#welcome" class="active">Home</a></li>
+                <li><a href="#bookchargingpoint" class="active">Charging Station</a></li>
+                <li><a href="#contact-us" class="active">Contact Us</a></li>
+            </ul>
+
+        </header>
+
+
+        <div class="content">
+            <div class="texthead">
+                <h1>Charging<span>S</span>tation</h1>
+                <p>จุดบริการชาร์จรถไฟฟ้า Ev ทั่วประเทศไทย</p>
+            </div>
+            <div class="imghead">
+                <img src="car.png">
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </section>
+
+
+<section class="">
+        <div class="decomidd"></div>
+<div class="colorcontentmidd">
+    <div class="contentmiddle">
+        <div>
+            <h2>รถไฟฟ้าEVมีดีอย่างไร?</h2>
+        </div>
+        <div class="textmiddle">
+            <div class="imgmid">
+                <img src="evcarmid.jpg">
+            </div>
+            <div class="texttext">
+                <p>EV
+                    เป็นรถยนต์ที่ขับเคลื่อนด้วยมอเตอร์โดยใช้พลังงานไฟฟ้าซึ่งเก็บอยู่ในแบตเตอรี่หรืออุปกรณ์เก็บพลังงานไฟฟ้าแบบอื่นๆ
+                    <br><br>
+                    รถชนิดนี้มีอัตราเร่งที่เรียบและเร็วเหนือกว่าเครื่องยนต์ที่ใช้น้ำมันรวมถึงการลดมลภาวะทางอากาศเพราะไม่ปล่อยควันพิษมาจากท่อไอเสีย
+
+                    และที่สำคัญไปกว่านั้นรถชนิดนี้ใช้พลังงานไฟฟ้าซึ่งเป็นพลังงานสะอาดที่เป็นมิตรต่อสิ่งแวดล้อมอีกด้วย
+                </p>
+
+
+
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+</body>
+
+</html>
